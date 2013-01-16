@@ -29,7 +29,7 @@
 #  MA 02110-1301, USA.
 #  
 #  
-SERVICE='apache2'
+SERVICE='SIPServer'
 echo "enter the service you want to check"
 read SERVICE
 if ps ax | grep -v grep | grep $SERVICE > /dev/null
