@@ -8,6 +8,7 @@ The sipper-bird checks whether the local SIP server is running.
    
 By default the sip server is started with this command string
 
+oils_ctl.sh -d /openils/var/run -s /openils/conf/oils_sip.xml -a start_sip
 
 =======
 There needs to be a cron job set for the sipper-bird. - The line below 
