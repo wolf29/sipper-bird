@@ -32,11 +32,9 @@ if  ps aux | grep -v grep | grep -i "${SERVICE3}" > /dev/null
 then
     echo "$SERVICE3 service running, everything is fine"
      # now check that the service is responding properly as well
-    /openils/bin/sip_expect_test
+    /openils/bin/sip_expect_test_2
 else
     echo "$SERVICE3 is not running"
     echo "$SERVICE3 is not running!" | mail -s "$SERVICE3 down" root
-    oils_ctl.sh -d /openils/var/run -s /openils/conf/oils_sip.xml -a start_sip
-     
-    
+    oils_ctl.sh -d /openils/var/run -s /openils/conf/oils_sip.xml -a start_sip    
 fi
