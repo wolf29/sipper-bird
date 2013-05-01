@@ -33,10 +33,10 @@ expect "Trying $name..."
 send "$testlogin"
 expect {
 "941"   {
-        send_user "Got it! The SIPServer is responding as it should. on $HOSTNAME"
+        send_user "Got it! The $name SIPServer is responding as it should"
         }
 timeout {
-        send "source /home/opensrf/sendsipwarning"
+        send "source FILE_OF_COMMANDS_TO_RUN_IF_SERVER_TIMESOUT"
         exit 1
         }
 }
