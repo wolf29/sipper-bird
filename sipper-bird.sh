@@ -31,7 +31,8 @@ SERVICE3='SIPServer'
 if  ps aux | grep -v grep | grep -i "${SERVICE3}" > /dev/null 
 then
     echo "$SERVICE3 service running, everything is fine"
-    
+     # now check that the service is responding properly as well
+    /openils/bin/s1p3xpect
 else
     echo "$SERVICE3 is not running"
     echo "$SERVICE3 is not running!" | mail -s "$SERVICE3 down" root
